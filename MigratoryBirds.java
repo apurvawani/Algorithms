@@ -1,7 +1,7 @@
 /*
 Given an array of n integers where each integer describes the type of a bird in the flock, find and print the type 
 number of the most common bird. If two or more types of birds are equally common, choose the type with the smallest 
-ID number.
+ID number. Where 1 <= IdNo <= 5.
 */
 
 import java.io.*;
@@ -11,9 +11,24 @@ import java.math.*;
 import java.util.regex.*;
 import java.util.Arrays;
 
-public class MigratoryBirds {
+public class Solution {
 
     static int migratoryBirds(int n, int[] ar) {
+        int[] b = new int[5];                     //Since id no is having restricted domain.
+        for(int i = 0 ; i < n ; i++){
+            int t = ar[i];
+            b[t-1]++;
+        }
+        int max = b[0] , result = 0;
+        for(int i = 1 ; i < 5 ; i++){
+            if(b[i] > max){
+                max = b[i];
+                result = i + 1;
+            }
+        }
+        return result;
+        /*
+        ***This approach fails for very large array size***
         Arrays.sort(ar);
         int count_i = 0;
         int[][] a = new int[n][2];
@@ -38,6 +53,7 @@ public class MigratoryBirds {
             }
         }
         return a[index][0];
+        */
         // Complete this function
     }
 
