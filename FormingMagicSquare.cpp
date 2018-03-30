@@ -8,7 +8,7 @@ Given s, convert it into a magic square at minimal cost by changing zero or more
 Then print this cost on a new line.
 
 
-*/
+*/ 
 #include <bits/stdc++.h>
 
 using namespace std;
