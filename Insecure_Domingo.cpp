@@ -1,15 +1,13 @@
 /*
 S1MPLE wants to go with any two among N numbers of girls which makes maximum product.
-
 'N' number of girls are standing in a row. Their heights are given.
-
 Calculate the maximum value of a Product, if it is defined by 
 Product = max(heights of any 2 girls) * (distance between them)
 
 Note : distance between any two girls is the absolute difference of their Indices.
 
 Input Format :
-The first line of the input contains one integer N — the number of girls standing in a row.
+The first line of the input contains one integer N â€” the number of girls standing in a row.
 Next line contain integer hi , where hi is height of ith girl
 
 Constraints :
@@ -26,6 +24,7 @@ Sample Input 0
 Sample Output 0
 20
 */
+
 #include <cmath>
 #include <cstdio>
 #include <vector>
